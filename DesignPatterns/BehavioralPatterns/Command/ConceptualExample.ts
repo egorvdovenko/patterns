@@ -12,15 +12,6 @@
  * - Invoker: Asks the command to carry out the request.
  * - Receiver: Knows how to perform the operations associated with carrying out a request.
  * 
- * This example includes:
- * 
- * - `Command` interface: Declares the `execute` method.
- * - `SimpleCommand` class: Implements simple operations on its own.
- * - `ComplexCommand` class: Delegates more complex operations to other objects (Receivers).
- * - `Receiver` class: Contains the business logic to perform operations.
- * - `Invoker` class: Sends requests to the command.
- * - Client code: Parameterizes the invoker with commands and executes them.
- * 
  * The Command pattern allows for decoupling the sender and receiver of a request,
  * and it allows for parameterizing objects with operations.
  */
