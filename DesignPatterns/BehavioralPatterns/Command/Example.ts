@@ -185,7 +185,7 @@ class RemoteControl {
 /**
  * Client Code: Sets up the devices, creates commands, and configures the remote control.
  */
-function main() {
+function clientCode() {
   // Create devices (Receivers)
   const light = new Light();
   const fan = new Fan();
@@ -215,5 +215,5 @@ function main() {
 }
 
 // Run the client code
-main();
+clientCode();
 }
