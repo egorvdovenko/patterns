@@ -2,6 +2,7 @@
   "name": "patterns",
   "version": "1.0.0",
   "scripts": {
+    "exec": "ts-node",
     "lint": "eslint . --ext .ts"
   },
   "author": "",
