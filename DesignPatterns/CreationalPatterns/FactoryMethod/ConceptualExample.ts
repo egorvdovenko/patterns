@@ -11,14 +11,6 @@
  * - Product: Declares the interface for the objects the factory method creates.
  * - ConcreteProduct: Implements the Product interface.
  * 
- * This example includes:
- * 
- * - `Creator` abstract class: Declares the `factoryMethod` and a core business logic method `someOperation` that relies on Product objects.
- * - `ConcreteCreator1` and `ConcreteCreator2` classes: Implement the `factoryMethod` to return specific ConcreteProduct instances.
- * - `Product` interface: Declares the `operation` method.
- * - `ConcreteProduct1` and `ConcreteProduct2` classes: Provide various implementations of the Product interface.
- * - Client code: Works with an instance of a concrete creator through its base interface.
- * 
  * The Factory Method pattern allows the client code to be independent of the concrete classes it needs to instantiate,
  * and it can work with any classes derived from the Creator class.
  */
