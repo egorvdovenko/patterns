@@ -1,4 +1,3 @@
-{
 /**
  * The Product interface declares the operations that all concrete transportation methods must implement.
  */
@@ -69,4 +68,5 @@ console.log('');
 
 console.log('App: Launched with SeaLogistics.');
 clientCode(new SeaLogistics());
-}
+
+export {};
