@@ -1,21 +1,4 @@
 /**
- * Factory Method Design Pattern
- * 
- * This example demonstrates the Factory Method design pattern, which defines an interface for creating an object,
- * but allows subclasses to alter the type of objects that will be created.
- * 
- * The pattern involves the following components:
- * 
- * - Creator: Declares the factory method that returns an object of type Product. May also provide some default implementation.
- * - ConcreteCreator: Overrides the factory method to return an instance of a ConcreteProduct.
- * - Product: Declares the interface for the objects the factory method creates.
- * - ConcreteProduct: Implements the Product interface.
- * 
- * The Factory Method pattern allows the client code to be independent of the concrete classes it needs to instantiate,
- * and it can work with any classes derived from the Creator class.
- */
-
-/**
  * The Creator class declares the factory method that is supposed to return an object of a Product class. 
  * The Creator's subclasses usually provide the implementation of this method.
  */
@@ -99,3 +82,5 @@ console.log('');
 
 console.log('App: Launched with the ConcreteCreator2.');
 clientCode(new ConcreteCreator2());
+
+export { };
