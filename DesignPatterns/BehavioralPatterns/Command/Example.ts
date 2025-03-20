@@ -1,4 +1,3 @@
-{
 /**
  * Command Interface: Declares the execute() method that all commands must implement.
  */
@@ -216,4 +215,5 @@ function clientCode() {
 
 // Run the client code
 clientCode();
-}
+
+export {};

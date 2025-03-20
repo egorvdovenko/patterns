@@ -1,22 +1,4 @@
 /**
- * Command Design Pattern
- * 
- * This example demonstrates the Command design pattern, which encapsulates a request as an object, 
- * thereby allowing for parameterization of clients with queues, requests, and operations.
- * 
- * The pattern involves the following components:
- * 
- * - Command: Declares an interface for executing an operation.
- * - ConcreteCommand: Defines a binding between a Receiver object and an action. Implements the execute method by invoking the corresponding operation(s) on Receiver.
- * - Client: Creates a ConcreteCommand object and sets its receiver.
- * - Invoker: Asks the command to carry out the request.
- * - Receiver: Knows how to perform the operations associated with carrying out a request.
- * 
- * The Command pattern allows for decoupling the sender and receiver of a request,
- * and it allows for parameterizing objects with operations.
- */
-
-/**
  * The Command interface declares a method for executing a command.
  */
 interface Command {
@@ -137,3 +119,5 @@ const receiver = new Receiver();
 invoker.setOnFinish(new ComplexCommand(receiver, 'Send email', 'Save report'));
 
 invoker.doSomethingImportant();
+
+export { };
