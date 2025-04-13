@@ -21,16 +21,20 @@ class Character {
     this.skills = {};
   }
 
-  // The `clone` method is the core of the Prototype pattern. It creates a shallow copy of the
-  // current object and ensures that mutable properties like `inventory` and `skills` are
-  // deeply copied to avoid shared references.
+  /**
+   * The `clone` method is the core of the Prototype pattern. It creates a shallow copy of the
+   * current object and ensures that mutable properties like `inventory` and `skills` are
+   * deeply copied to avoid shared references.
+   */
   public clone(): this {
     const clone = Object.create(this);
     clone.inventory = [...this.inventory];
     clone.skills = { ...this.skills };
 
-    // If the character belongs to a team, the team reference is updated to include the cloned 
-    // character, ensuring the cloned object is properly integrated into the team structure.
+    /**
+     * If the character belongs to a team, the team reference is updated to include the cloned
+     * character, ensuring the cloned object is properly integrated into the team structure.
+     */
     if (this.team) {
       clone.team = {
         ...this.team,
@@ -53,16 +57,20 @@ class Team {
     this.members = [];
   }
 
-  // Adds a character to the team and establishes a bidirectional relationship by setting 
-  // the character's `team` property.
+  /**
+   * Adds a character to the team and establishes a bidirectional relationship by setting 
+   * the character's `team` property.
+   */
   public addMember(member: Character): void {
     this.members.push(member);
     member.team = this;
   }
 }
 
-// These are prototype objects that serve as templates for creating new characters. 
-// They define default properties and behaviors for specific character types.
+/**
+ * These are prototype objects that serve as templates for creating new characters.
+ * They define default properties and behaviors for specific character types.
+ */
 const WarriorTemplate = new Character("Warrior", 100, 20, 10);
 WarriorTemplate.skills = { slash: 15, block: 10 };
 WarriorTemplate.inventory = ["Sword", "Shield"];

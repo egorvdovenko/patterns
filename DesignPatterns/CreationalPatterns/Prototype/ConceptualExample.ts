@@ -15,10 +15,12 @@ class Prototype {
     }
 
     if (this.circularReference) {
-      // Cloning an object that has a nested object with backreference
-      // requires special treatment. After the cloning is completed, the
-      // nested object should point to the cloned object, instead of the
-      // original object. Spread operator can be handy for this case.
+      /**
+       * Cloning an object that has a nested object with backreference
+       * requires special treatment. After the cloning is completed, the
+       * nested object should point to the cloned object, instead of the
+       * original object. Spread operator can be handy for this case.
+       */
       clone.circularReference = {
         ...this.circularReference,
         prototype: { ...this }
