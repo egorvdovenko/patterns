@@ -1,17 +1,21 @@
-
 /**
- * The configuration manager loads settings once and provides global access 
- * to them throughout the application.
+ * The ConfigurationManager class implements the Singleton pattern to ensure
+ * a single instance manages application configurations.
  */
 class ConfigurationManager {
   private static instance: ConfigurationManager;
   private settings: Record<string, string | number>;
 
+  /**
+   * Private constructor prevents direct instantiation.
+   */
   private constructor() {
-    // Private constructor prevents direct construction
     this.settings = this.loadConfigurations();
   }
 
+  /**
+   * Returns the single instance of ConfigurationManager, creating it if necessary.
+   */
   public static getInstance(): ConfigurationManager {
     if (!ConfigurationManager.instance) {
       ConfigurationManager.instance = new ConfigurationManager();
@@ -19,8 +23,10 @@ class ConfigurationManager {
     return ConfigurationManager.instance;
   }
 
+  /**
+   * Simulates loading configuration settings from an external source.
+   */
   private loadConfigurations(): Record<string, string | number> {
-    // Simulate loading from a file/database
     return {
       theme: "dark",
       apiUrl: "https://api.example.com",
@@ -28,20 +34,25 @@ class ConfigurationManager {
     };
   }
 
-  // Business logic methods
+  /**
+   * Retrieves a configuration setting by key.
+   */
   public getSetting(key: string): string | number {
     return this.settings[key];
   }
 }
 
 /**
- * Client code
+ * Client code demonstrating the Singleton pattern.
  */
 function client() {
   const config1 = ConfigurationManager.getInstance();
   const config2 = ConfigurationManager.getInstance();
 
+  // Both variables reference the same instance
   console.log(config1 === config2); // true
+
+  // Accessing configuration settings
   console.log(config1.getSetting("apiUrl")); // Same value from both
   console.log(config2.getSetting("theme")); // Same value from both
 }
