@@ -1,4 +1,13 @@
 /**
+ * Example Use Case:
+ * This example models a logistics system where different transportation methods (e.g., truck and ship)
+ * are created using the Factory Method pattern. The `Logistics` class defines the factory method,
+ * and its subclasses (`RoadLogistics` and `SeaLogistics`) provide specific implementations.
+ * This allows the logistics system to plan deliveries using different transportation types
+ * without modifying the core logic.
+ */
+
+/**
  * The Product interface declares the operations that all concrete transportation methods must implement.
  */
 interface Transportation {

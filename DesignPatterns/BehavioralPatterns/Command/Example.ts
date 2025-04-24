@@ -1,4 +1,12 @@
 /**
+ * Example Use Case:
+ * This example represents a smart home system where commands are used to control devices like lights, fans, and music players.
+ * The `RemoteControl` acts as an invoker, storing and executing commands such as turning on lights, setting fan speed,
+ * and adjusting music volume. This approach decouples the request sender from the receiver,
+ * enabling flexible and reusable command execution.
+ */
+
+/**
  * Command Interface: Declares the execute() method that all commands must implement.
  */
 interface Command {

@@ -1,7 +1,14 @@
 /**
- * The Prototype pattern is used to create new objects by copying an existing object (prototype).
- * This allows for efficient object creation and customization without the need to instantiate
- * new objects from scratch.
+ * Example Use Case:
+ * This example demonstrates a game scenario where characters are created using a prototype.
+ * The `Character` class serves as a prototype for creating new characters by cloning existing ones.
+ * This approach is used to efficiently create characters with similar properties (e.g., inventory, skills)
+ * while allowing customization. The example also shows how cloned characters can belong to a team,
+ * ensuring proper integration into the team structure.
+ */
+
+/**
+ * The Character class represents a game character and implements the Prototype pattern.
  */
 class Character {
   public name: string;

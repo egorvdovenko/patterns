@@ -1,4 +1,12 @@
 /**
+ * Example Use Case:
+ * This example showcases a payment processing system where an adapter is used to integrate
+ * a third-party payment service (`ThirdPartyPay`) with the application's existing `PaymentProcessor` interface.
+ * The `ThirdPartyPayAdapter` translates calls from the application's interface to the third-party service,
+ * enabling seamless collaboration between incompatible systems.
+ */
+
+/**
  * PaymentProcessor is the target interface expected by the client code.
  */
 class PaymentProcessor {

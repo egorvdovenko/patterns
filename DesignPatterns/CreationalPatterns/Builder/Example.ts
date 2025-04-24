@@ -1,4 +1,13 @@
 /**
+ * Example Use Case:
+ * This example illustrates a computer assembly system where different types of computers
+ * (e.g., office and gaming) are built step by step using the Builder pattern.
+ * The `ComputerDirector` orchestrates the construction process, while specific builders
+ * (`OfficeComputerBuilder` and `GamingComputerBuilder`) define the configurations for each type of computer.
+ * This approach is ideal for constructing complex objects with varying configurations.
+ */
+
+/**
  * The computer builder interface defines the methods for creating parts of a
  * computer. Each concrete builder will implement these methods to create
  * specific types of computers.

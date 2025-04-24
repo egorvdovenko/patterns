@@ -1,4 +1,12 @@
 /**
+ * Example Use Case:
+ * This example demonstrates a UI theming system where different factories (`LightThemeFactory` and `DarkThemeFactory`)
+ * produce families of UI components (buttons and checkboxes) that are consistent with a specific theme.
+ * The Abstract Factory pattern ensures that all components within a theme are compatible
+ * and can collaborate effectively.
+ */
+
+/**
  * The Abstract Factory interface declares a set of methods that return
  * different abstract UI components. These components are part of a theme family.
  */

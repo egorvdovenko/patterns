@@ -1,4 +1,12 @@
 /**
+ * Example Use Case:
+ * This example implements a configuration manager for an application using the Singleton pattern.
+ * The `ConfigurationManager` ensures that only one instance manages the application's settings,
+ * such as theme, API URL, and timeout. This guarantees consistent access to configuration data
+ * across the application while preventing multiple instances from being created.
+ */
+
+/**
  * The ConfigurationManager class implements the Singleton pattern to ensure
  * a single instance manages application configurations.
  */
